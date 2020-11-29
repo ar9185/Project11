@@ -1,12 +1,12 @@
-import React,{Component} from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-import styles from '../styles/style'
-class Entry extends Component {
+import React, {Component} from 'react';
+import { StyleSheet, Button, View } from 'react-native';
+import styles from '../styles/style';
+
+class Entry extends React.Component {
 render() {
 return (
     <View  style={styles.border}>
-        <Tex> Hello World </Text>
-
+        <Button title= {this.props.item.title } onPress= { () =>this.props.toDetails(this.props.item) } />
     </View>
 );
 }
